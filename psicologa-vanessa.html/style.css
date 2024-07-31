@@ -1,0 +1,200 @@
+html {
+    background: rgb(221, 241, 234) ;
+    color: #666666; 
+    font-size: 18px;
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+h2, h4 {
+    text-align: center;
+    color: #DE865a;
+}
+
+p {
+    text-indent: 1.5em;
+}
+
+h4 {font-size: 1.2rem;}
+h2 {font-size: 1.6rem;}
+
+.main p {
+    text-indent: 1.5em;
+}
+
+.psicóloga {
+    position: absolute;
+    top: 70%;
+    width:50%
+}
+
+.objetivo {
+    position: absolute;
+    top: 110%;
+}
+
+#mim {
+    position:absolute;
+    top: 50%;
+}
+
+.main ul li {
+    line-height: 1.5em;
+}
+
+.processo {
+    position: relative;
+    top: 160%;
+    left: 50%;
+    width: 50%;
+}
+
+.psicoterapia {
+    position: relative;
+    top: 140%;
+}
+
+#formaçao {
+    position: absolute;
+    top: 268%;
+}
+
+
+#home {
+    position: absolute;
+    left: 70%;
+    top: 20px;
+    font-size:medium;
+}
+
+a {
+    color: indianred;
+}
+
+a:hover {
+    color: lightcoral;
+}
+
+#home ul {
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+#img1 img {
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 750px;
+    top: 100px;
+}
+
+#img2 img {
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 100px;
+    top: 520px;
+}
+
+#img3 img {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    position:relative;
+    left:950px;
+    top: 40px;
+}
+
+
+.como {
+    position: relative;
+    top: 180%;
+}
+
+#img img {
+    position: relative;
+    top: 1px;
+    left: 20px;
+    max-width: 700px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+}
+
+#img4 img {
+    position: relative;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+@media (max-width: 768px) {
+    #img img {
+        max-width: 280px;
+        max-height: 280px;
+    }
+    
+    #img1 img {
+        max-width: 200px;
+        max-height: 200px;
+        position: relative;
+        left: 280px;
+        top: 260px;
+    }
+
+    #img3 img {
+        max-width: 200px;
+        max-height: 200px;
+        position: relative;
+        top: 20%;
+        left: 280px;
+    }
+    
+    #home {
+        font-size: small;
+        top: 15px;
+        left: 300px;
+        display: flex;
+    }
+
+    .mim {
+        position: relative;
+        font-size: smaller;
+        line-height: 1.5em;
+        top: 100px;
+    }
+    .objetivo {
+        position: relative;
+        font-size: smaller;
+        top: 100px;
+    }
+    #meutrabalho {
+        position: relative;
+        font-size: smaller;
+        line-height: 1.5em;
+        top: 250px;
+    }
+
+    .psicóloga {
+        position:relative;
+        font-size: small;
+        top: 90px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: smaller;
+        line-height: 1.5em;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+}
+
