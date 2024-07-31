@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicóloga Vanessa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #img img {
+            width: 200px;
+            height: auto;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .imagem-centro {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .imagem-centro img {
+            width: 60%;
+            height: auto;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+
+        .sobremim {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .sobremim div {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .sobremim img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .sobremim h2 {
+            color: #333;
+        }
+
+        .sobremim ul {
+            padding-left: 20px;
+        }
+
+        .sobremim-conteudo {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .sobremim-conteudo img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .faixa-agendamento {
+            background-color: #e3f2fd;
+            color: #333;
+            text-align: center;
+            padding: 20px 10px;
+            margin: 20px 0;
+            border: 1px solid #90caf9;
+            border-radius: 8px;
+        }
+
+        .faixa-agendamento p {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .faixa-agendamento form {
+            margin-top: 10px;
+        }
+
+        .faixa-agendamento input[type="text"],
+        .faixa-agendamento input[type="telefone"],
+        .faixa-agendamento input[type="submit"] {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #90caf9;
+            border-radius: 5px;
+        }
+
+        .faixa-agendamento input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .faixa-agendamento input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+
+        .faixa-agendamento .whatsapp-button {
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            background-color: #25d366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .faixa-agendamento .whatsapp-button:hover {
+            background-color: #20c357;
+        }
+
+        .faixa-agendamento .whatsapp-button img {
+            margin-right: 8px;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="img">
+            <img src="./logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobremim">Sobre mim</a></li>
+                <li><a href="#meutrabalho">Meu trabalho</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#agendamento">Agendamento</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Vanessa Malvina de Oliveira | Psicóloga Equilíbrio Emocional</h1>
+        <div class="imagem-centro">
+            <img src="./imgbracoscruzados.jpg" alt="imagembraçoscruzados">
+        </div>
+        <div class="sobremim" id="sobremim">
+            <div>
+                <h2>Sobre mim</h2>
+                 <p> Sou <strong>psicóloga</strong>, atuo com pessoas que buscam alcançar o equilíbrio de suas emoções. Acredito que a ferramenta mais poderosa para isso está no autoconhecimento, pois só dominamos aquilo que sabemos.</p>
+            </div>
+        </div>
+        <div class="sobremim-conteudo">
+            <div>
+                <h4>Amo ser psicóloga, mas isso não é tudo que sou...</h4>
+                <ul>
+                    <li>Sou de Bom Despacho, uma cidade do centro-oeste mineiro, com suas características interioranas, a qual não pretendo deixar.</li>
+                    <li>Sempre quis ser mãe e há seis anos vivo os desafios e delícias da maternidade.</li>
+                    <li>Gosto de previsibilidade e rotinas, apesar de ter dificuldades de manter algumas constâncias importantes como a academia e o uso de protetor solar.</li>
+                    <li>Me desconecto e me reenergizo viajando ou em um fim de semana no sítio.</li>
+                </ul>
+                <p>O meu objetivo é dar a melhor ajuda para a sua saúde psicológica e o seu bem-estar emocional, através das <strong>melhores terapias</strong> que há atualmente, tratando transtorno bipolar, depressões, ansiedade, stress, pânico, baixa auto-estima e/ou auto-confiança, etc.</p>
+                <p>Da minha parte, pode contar com o meu melhor <strong>profissionalismo</strong>, mas também esperar uma relação de <strong>confiança, empatia e autenticidade.</strong></p>
+            </div>
+            <img src="sobremim.jpg" alt="Sobre mim">
+        </div>
+        <div>
+            <h2>Meu Trabalho</h2>
+            <p>Como psicóloga, meu papel vai além de escutar, provocar reflexões e oferecer direcionamentos. Sou uma equilibrista de emoções, uma guia na jornada complexa de entender, aceitar e harmonizar os sentimentos que moldam nossas vidas. Todos nós enfrentamos momentos de turbulência emocional, onde sentimentos de ansiedade, tristeza, ou até mesmo euforia descontrolada podem nos desestabilizar. É aqui que minha missão se torna essencial.</p>
+                <p>O equilíbrio emocional não é apenas sobre evitar os extremos, mas sobre aprender a navegar por eles com sabedoria e compaixão. Imagine-se em uma corda bamba, cada passo exige concentração, autoconhecimento e equilíbrio. Na vida, essas ferramentas são fundamentais para manter a estabilidade e o bem-estar mental.</p>
+                <p><strong>E por que isso é importante?</strong></p>
+                <p>As emoções são a linguagem da nossa alma. Elas nos conectam aos outros e a nós mesmos de maneiras profundas e significativas. Quando aprendemos a equilibrá-las, não apenas melhoramos nosso bem-estar mental, mas também nossas relações, nossa produtividade e, em última análise, nossa felicidade.</p>
+                <p>Se você sente que está desequilibrado(a) emocionalmente, saiba que não está sozinho(a). Estou aqui para ajudar. Juntos, podemos transformar a maneira como você lida com suas emoções, trazendo mais harmonia e paz para sua vida.</p>
+                <p>Venha dar o primeiro passo nessa caminhada rumo ao equilíbrio emocional. Lembre-se, você não precisa fazer isso sozinho(a). Eu sou sua equilibrista de emoções, pronta para guiar você nessa jornada de autodescoberta e transformação.</p>
+        </div>
+        <div class="faixa-agendamento">
+            <p>Agende sua consulta presencial ou online</p>
+            <form>
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="telefone" name="telefone" placeholder="Seu telefone" required>
+                <input type="submit" value="Agendar">
+            </form>
+            <a class="whatsapp-button" href="https://wa.me/seunumero" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" width="20" height="20">
+                Agende também pelo WhatsApp
+            </a>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 Psicóloga Vanessa Malvina de Oliveira. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>
