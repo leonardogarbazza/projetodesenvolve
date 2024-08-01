@@ -43,14 +43,19 @@ h2 {font-size: 1.6rem;}
 
 .processo {
     position: relative;
-    top: 160%;
+    top: 300px;
     left: 50%;
-    width: 50%;
+    width:50%;
 }
 
 .psicoterapia {
     position: relative;
-    top: 140%;
+    top: 300px;
+}
+
+.como {
+    position: relative;
+    top: 300px;
 }
 
 #formaçao {
@@ -82,53 +87,39 @@ a:hover {
 #img1 img {
     max-width: 400px;
     max-height: 400px;
-    width: auto;
-    height: auto;
     position: relative;
     left: 750px;
-    top: 100px;
+    top: 420px;
 }
 
 #img2 img {
     max-width: 400px;
     max-height: 400px;
-    width: auto;
-    height: auto;
     position: relative;
     left: 100px;
-    top: 520px;
+    top: 820px;
 }
 
 #img3 img {
     max-width: 300px;
     max-height: 300px;
-    width: auto;
-    height: auto;
     position:relative;
     left:950px;
-    top: 40px;
-}
-
-
-.como {
-    position: relative;
-    top: 180%;
+    top: 350px;
 }
 
 #img img {
-    position: relative;
+    position: absolute;
     top: 1px;
-    left: 20px;
     max-width: 700px;
     max-height: 500px;
-    width: auto;
-    height: auto;
 }
 
 #img4 img {
     position: relative;
     max-width: 400px;
     max-height: 400px;
+    top: 380px;
 }
 
 @media (max-width: 768px) {
@@ -142,48 +133,82 @@ a:hover {
         max-height: 200px;
         position: relative;
         left: 280px;
-        top: 260px;
+    }
+
+    #img2 img {
+        max-width: 200px;
+        max-height: 250px;
+        position: relative;
+        left: 20px;
+        top: 450px;
     }
 
     #img3 img {
         max-width: 200px;
-        max-height: 200px;
-        position: relative;
-        top: 20%;
-        left: 280px;
-    }
-    
-    #home {
-        font-size: small;
-        top: 15px;
-        left: 300px;
-        display: flex;
+        max-height: 250px;
+        top: 130px;
+        left: 250px;
     }
 
+    #img4 img {
+        max-width: 200px;
+        max-height: 200px;
+        top: 150px;
+    }
+    
     .mim {
         position: relative;
         font-size: smaller;
-        line-height: 1.5em;
-        top: 100px;
-    }
-    .objetivo {
-        position: relative;
-        font-size: smaller;
-        top: 100px;
-    }
-    #meutrabalho {
-        position: relative;
-        font-size: smaller;
-        line-height: 1.5em;
-        top: 250px;
-    }
+        top: 2%;
+ }
 
     .psicóloga {
         position:relative;
         font-size: small;
         top: 90px;
     }
+
+    .objetivo {
+        position: relative;
+        font-size: smaller;
+        top: 100px;
+    }
+
+    .psicoterapia {
+        position: relative;
+        font-size: smaller;
+        top: 1%;
+    }
+
+    .processo {
+        position: relative;
+        font-size: smaller;
+        top: 15px;
+    }
     
+    .processo ul li {
+        font-size: smaller;
+    }
+
+    .como {
+        font-size: smaller;
+        position: relative;
+        top: 20px;
+    }
+    .como ul li {
+        font-size: smaller;
+    }
+    
+    #formaçao {
+        top: 330%;
+        width: 50%;
+        font-size: small;
+    }
+
+    #formaçao h2 {
+        font-size: 18px;
+    }
+
     h2 {
         font-size: 18px;
     }
