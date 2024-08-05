@@ -5,6 +5,7 @@ html {
     font-family: 'Arial', Helvetica, sans-serif;
 }
 
+
 h2, h4 {
     text-align: center;
     color: #DE865a;
@@ -14,27 +15,42 @@ p {
     text-indent: 1.5em;
 }
 
-h4 {font-size: 1.2rem;}
-h2 {font-size: 1.6rem;}
+h4 {font-size: 1.4rem;}
+h2 {font-size: 1.8rem;}
 
-.main p {
-    text-indent: 1.5em;
+h3 {
+    font-size: 1.6rem;
+    color: #DE865a;
+    text-align: center;
+}
+
+h5 {
+    font-size: 1.2rem;
+    color: #DE865a;
+    text-align: center;
+}
+
+#meutrabalho {
+    position: relative;
+    top: 170px;
+    padding: 2%;
 }
 
 .psicóloga {
     position: absolute;
-    top: 70%;
+    top: 150px;
     width:50%
 }
 
 .objetivo {
     position: absolute;
-    top: 110%;
+    top: 415px;
 }
 
-#mim {
+#sobremim {
     position:absolute;
-    top: 50%;
+    top: 420px;
+    padding: 2%;
 }
 
 .main ul li {
@@ -43,31 +59,26 @@ h2 {font-size: 1.6rem;}
 
 .processo {
     position: relative;
-    top: 300px;
     left: 50%;
     width:50%;
 }
 
-.psicoterapia {
-    position: relative;
-    top: 300px;
-}
 
 .como {
     position: relative;
-    top: 300px;
+    padding: 2%;
 }
 
 #formaçao {
     position: absolute;
-    top: 268%;
+    top: 3300px;
+    padding: 2%;
 }
 
 
 #home {
     position: absolute;
-    left: 70%;
-    top: 20px;
+    top: 330px;
     font-size:medium;
 }
 
@@ -81,7 +92,16 @@ a:hover {
 
 #home ul {
     list-style-type: none;
-    line-height: 1.5;
+    display: flex;
+}
+
+#home ul li {
+    padding-left: 50px;
+}
+
+#agendamento {
+    position: relative;
+    top: 250px;
 }
 
 #img1 img {
@@ -89,7 +109,8 @@ a:hover {
     max-height: 400px;
     position: relative;
     left: 750px;
-    top: 420px;
+    top: 250px;
+    border-radius: 50%;
 }
 
 #img2 img {
@@ -97,29 +118,32 @@ a:hover {
     max-height: 400px;
     position: relative;
     left: 100px;
-    top: 820px;
+    top: 1450px;
+    border-radius: 30%;
 }
 
 #img3 img {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 350px;
+    max-height: 350px;
     position:relative;
-    left:950px;
-    top: 350px;
+    left:930px;
+    top: 220px;
+    border-radius: 50%;
 }
 
 #img img {
-    position: absolute;
-    top: 1px;
+    position: relative;
     max-width: 700px;
     max-height: 500px;
+    left: 25%;
 }
 
 #img4 img {
-    position: relative;
+    position: absolute;
     max-width: 400px;
     max-height: 400px;
-    top: 380px;
+    top: 3500px;
+    display: flex;
 }
 
 @media (max-width: 768px) {
@@ -129,10 +153,11 @@ a:hover {
     }
     
     #img1 img {
-        max-width: 200px;
-        max-height: 200px;
+        max-width: 230px;
+        max-height: 230px;
         position: relative;
-        left: 280px;
+        left: 230px;
+        top: 550px;
     }
 
     #img2 img {
@@ -140,86 +165,133 @@ a:hover {
         max-height: 250px;
         position: relative;
         left: 20px;
-        top: 450px;
+        top: 1900px;
     }
 
     #img3 img {
         max-width: 200px;
         max-height: 250px;
-        top: 130px;
+        position: relative;
+        top: 850px;
         left: 250px;
     }
 
     #img4 img {
-        max-width: 200px;
-        max-height: 200px;
-        top: 150px;
+        max-width: 300px;
+        max-height: 300px;
+        position: relative;
+        top: 860px;
+        left: 18%;
+    } 
+
+    #home {
+        position: absolute; 
+        top: 33%;
+        display: inline-block;
+    }
+
+    #home ul li a {
+        color: indianred;
+        font-size: smaller;
     }
     
     .mim {
-        position: relative;
+        position: absolute;
         font-size: smaller;
-        top: 2%;
- }
+        top: 1%;
+    }
 
     .psicóloga {
         position:relative;
-        font-size: small;
-        top: 90px;
+        top: 110px;
+        font-size: smaller;
     }
 
     .objetivo {
         position: relative;
         font-size: smaller;
-        top: 100px;
+        top: 110px;
     }
 
-    .psicoterapia {
+    #meutrabalho {
         position: relative;
         font-size: smaller;
-        top: 1%;
+        top: 700px;
+    }
+
+    .equilibrio {
+        position: absolute;
+        top: 190px;
+    }
+    
+    .guia {
+        position: relative;
+        top: 140px;
+    }
+  
+    .psicoterapia {
+        position: relative;
+        top: 145px;
     }
 
     .processo {
         position: relative;
-        font-size: smaller;
-        top: 15px;
-    }
-    
-    .processo ul li {
-        font-size: smaller;
+        top: 125px;
     }
 
     .como {
-        font-size: smaller;
         position: relative;
-        top: 20px;
+        top: 100px;
     }
-    .como ul li {
-        font-size: smaller;
+    .como p {
+        margin: 0;
+    }
+
+    .mentoria {
+        position: relative;
+        top: 90px;
+    }
+
+     .clinica {
+        position: relative;
+        top: 90px;
+    }    
+
+    .clinica h5 {
+        margin: 0;
     }
     
     #formaçao {
-        top: 330%;
+        top: 3350px;
         width: 50%;
         font-size: small;
     }
 
-    #formaçao h2 {
-        font-size: 18px;
+    #agendamento {
+        position: absolute;
+        top: 3800px;
+        left: 25%;
     }
 
     h2 {
-        font-size: 18px;
+        font-size: 19px;
     }
 
+
     p {
-        font-size: smaller;
-        line-height: 1.5em;
+        line-height: 1em;
     }
 
     h4 {
         font-size: 16px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 15px;
     }
 }
 
