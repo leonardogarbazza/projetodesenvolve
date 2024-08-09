@@ -5,30 +5,20 @@ html {
     font-family: 'Arial', Helvetica, sans-serif;
 }
 
-
-h2, h4 {
+h2, h4, h3, h5 {
     text-align: center;
-    color: #DE865a;
+    color: rgba(205, 92, 92, 0.884);
 }
 
-p {
-    text-indent: 1.5em;
-}
+p {text-indent: 1.5em;}
 
 h4 {font-size: 1.4rem;}
+
 h2 {font-size: 1.8rem;}
 
-h3 {
-    font-size: 1.6rem;
-    color: #DE865a;
-    text-align: center;
-}
+h3 {font-size: 1.6rem;}
 
-h5 {
-    font-size: 1.2rem;
-    color: #DE865a;
-    text-align: center;
-}
+h5 {font-size: 1.2rem;}
 
 #meutrabalho {
     position: relative;
@@ -63,7 +53,6 @@ h5 {
     width:50%;
 }
 
-
 .como {
     position: relative;
     padding: 2%;
@@ -75,28 +64,25 @@ h5 {
     padding: 2%;
 }
 
-
 #home {
     position: absolute;
-    top: 330px;
-    font-size:medium;
+    top: 10px;
+    font-size: medium;
 }
 
-a {
-    color: indianred;
-}
+a {color: indianred;}
 
-a:hover {
-    color: lightcoral;
-}
+a:hover {color: lightcoral;}
 
 #home ul {
     list-style-type: none;
-    display: flex;
+    display: flex; 
 }
 
 #home ul li {
-    padding-left: 50px;
+    padding-left: 27px;
+    border-right: 3px solid indianred;
+    padding-right: 26px;
 }
 
 #agendamento {
@@ -109,7 +95,7 @@ a:hover {
     max-height: 400px;
     position: relative;
     left: 750px;
-    top: 250px;
+    top: 240px;
     border-radius: 50%;
 }
 
@@ -125,9 +111,9 @@ a:hover {
 #img3 img {
     max-width: 350px;
     max-height: 350px;
-    position:relative;
-    left:930px;
-    top: 220px;
+    left: 930px;
+    position: relative;
+    top: 250px;
     border-radius: 50%;
 }
 
@@ -136,6 +122,7 @@ a:hover {
     max-width: 700px;
     max-height: 500px;
     left: 25%;
+    top: 100px;
 }
 
 #img4 img {
@@ -146,152 +133,4 @@ a:hover {
     display: flex;
 }
 
-@media (max-width: 768px) {
-    #img img {
-        max-width: 280px;
-        max-height: 280px;
-    }
-    
-    #img1 img {
-        max-width: 230px;
-        max-height: 230px;
-        position: relative;
-        left: 230px;
-        top: 550px;
-    }
-
-    #img2 img {
-        max-width: 200px;
-        max-height: 250px;
-        position: relative;
-        left: 20px;
-        top: 1900px;
-    }
-
-    #img3 img {
-        max-width: 200px;
-        max-height: 250px;
-        position: relative;
-        top: 850px;
-        left: 250px;
-    }
-
-    #img4 img {
-        max-width: 300px;
-        max-height: 300px;
-        position: relative;
-        top: 860px;
-        left: 18%;
-    } 
-
-    #home {
-        position: absolute; 
-        top: 33%;
-        display: inline-block;
-    }
-
-    #home ul li a {
-        color: indianred;
-        font-size: smaller;
-    }
-    
-    .mim {
-        position: absolute;
-        font-size: smaller;
-        top: 1%;
-    }
-
-    .psicóloga {
-        position:relative;
-        top: 110px;
-        font-size: smaller;
-    }
-
-    .objetivo {
-        position: relative;
-        font-size: smaller;
-        top: 110px;
-    }
-
-    #meutrabalho {
-        position: relative;
-        font-size: smaller;
-        top: 700px;
-    }
-
-    .equilibrio {
-        position: absolute;
-        top: 190px;
-    }
-    
-    .guia {
-        position: relative;
-        top: 140px;
-    }
-  
-    .psicoterapia {
-        position: relative;
-        top: 145px;
-    }
-
-    .processo {
-        position: relative;
-        top: 125px;
-    }
-
-    .como {
-        position: relative;
-        top: 100px;
-    }
-    .como p {
-        margin: 0;
-    }
-
-    .mentoria {
-        position: relative;
-        top: 90px;
-    }
-
-     .clinica {
-        position: relative;
-        top: 90px;
-    }    
-
-    .clinica h5 {
-        margin: 0;
-    }
-    
-    #formaçao {
-        top: 3350px;
-        width: 50%;
-        font-size: small;
-    }
-
-    #agendamento {
-        position: absolute;
-        top: 3800px;
-        left: 25%;
-    }
-
-    h2 {
-        font-size: 19px;
-    }
-
-
-    p {
-        line-height: 1em;
-    }
-
-    h4 {
-        font-size: 16px;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-
-    h5 {
-        font-size: 15px;
-    }
-}
 
