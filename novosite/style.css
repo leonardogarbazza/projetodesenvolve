@@ -1,0 +1,315 @@
+html {
+    background: rgb(221, 241, 234) ;
+    /*color: #666666;*/
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    font-size: 110%;
+}
+
+h1, h2, h3 {
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Fundo branco para o cabeçalho */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Opcional, pode ser removido se não for necessário */
+    width: 100%;
+}
+
+
+#img {
+    flex-shrink: 0; 
+} 
+
+
+#img img {
+    width: 400px; /* Ajustar o tamanho da logo se necessário */
+    height: auto;
+    display: flex;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center; /* Centraliza o conteúdo do nav */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Exibe o menu como um bloco em linha */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em; /* Aumentar o tamanho da fonte dos links */
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em; /* Aumentar o tamanho da fonte dos links */
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+main {
+    padding: 20px;
+    /* Ajustar o padding superior se necessário, dependendo do layout */
+    padding-top: 20px; /* Ajuste aqui se necessário */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em; /* Aumentar o tamanho do título principal */
+    margin-bottom: 20px;
+}
+
+h2, h3, h4, h5 {
+    color: #333;
+    font-weight: 600; /* Deixar os títulos em negrito */
+    margin-bottom: 10px; /* Adicionar espaço abaixo dos títulos */
+}
+
+h2 {
+    font-size: 2em; /* Tamanho para os subtítulos principais */
+}
+
+h3 {
+    font-size: 1.75em; /* Tamanho para subtítulos secundários */
+}
+
+h4 {
+    font-size: 1.5em; /* Tamanho para subtítulos terciários */
+}
+
+h5 {
+    font-size: 1.25em; /* Tamanho para subtítulos menores */
+}
+
+.imagem-centro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.imagem-centro img {
+    width: 60%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.sobremim {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-top: 1px solid;
+    padding-bottom: 10px; 
+    margin-bottom: 10px; 
+}
+
+.sobremim div {
+    flex: 1;
+    min-width: 280px;
+}
+
+.sobremim img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.sobremim-conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.sobremim-conteudo img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.objetivo {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.como-funciona {
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os blocos */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+.como-funciona-bloco {
+    background-color: #f9f9f9; /* Fundo suave para os blocos */
+    border: 1px solid #ddd; /* Borda suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin: 10px; /* Espaçamento externo entre os blocos */
+    flex: 1;
+    min-width: 250px; /* Largura mínima dos blocos */
+    max-width: 300px; /* Largura máxima dos blocos */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+}
+
+.como-funciona-bloco h6 {
+    color: #333;
+    font-size: 1.25em; /* Tamanho dos títulos dos blocos */
+    margin-bottom: 10px;
+}
+
+.como-funciona-bloco p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0; /* Remove margem padrão dos parágrafos */
+}
+
+.mentoria {
+    margin-top: 20px;
+    border-top: 1px solid;
+
+}
+
+.formacao {
+    border-top: 1px solid;
+    
+}
+
+.formacao img {
+    max-width: 400px;
+    border-radius: 8px;
+    float: right;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+#agendamento {
+    padding: 10px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    position: relative; /* Necessário para posicionar a imagem */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+    position: relative; /* Adiciona o contexto de posicionamento para o conteúdo */
+    z-index: 1; /* Garante que o conteúdo esteja acima da imagem */
+}
+
+.footer-img {
+    position: absolute; /* Posiciona a imagem absolutamente em relação ao footer */
+    top: -70px; /* Ajusta a distância do topo do footer */
+    left: -30px; /* Ajusta a distância do lado esquerdo do footer */
+    bottom: 50px;
+    max-width: 500px; /* Define a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.footer-img img {
+    max-width: 100%; /* Garante que a imagem se ajuste ao tamanho do container */
+    height: auto;
+}
+
+.agendamento-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente o botão */
+}
+
+.contact-info {
+    text-align: right;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha verticalmente as informações de contato */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 3px 0; /* Reduz o espaçamento entre as linhas */
+}
+
+.contact-item i {
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.agendamento-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 170px;
+}
+
+.agendamento-button:hover {
+    background-color: #0056b3;
+}
+
+footer p {
+    font-size: 20px;
+    text-align: center;
+}
