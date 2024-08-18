@@ -500,7 +500,78 @@
             background-color: #007bff; /* Cor de fundo ao passar o mouse */
             color: #ffffff; /* Cor do ícone ao passar o mouse */
         }
-
+        .meutrabalho {
+            padding: 40px 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 40px 0;
+        }
+        
+        .meutrabalho-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .meutrabalho-image {
+            flex: 1;
+            max-width: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .meutrabalho-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .meutrabalho-content {
+            flex: 2;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .meutrabalho-content h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .meutrabalho-content p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .meutrabalho-content p strong {
+            color: #007bff;
+        }
+        
+        .btn-contato {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-contato:hover {
+            background-color: #0056b3;
+        }
+        
     </style>
 </head>
 
@@ -534,23 +605,29 @@
                 <p>Estou aqui para oferecer suporte e orientação em sua jornada emocional. Explore nosso espaço e descubra como podemos trabalhar juntos para promover seu bem-estar.</p>                
             </div>
         </div>
-        <section class="sobremim" id="sobremim">
-            <div class="sobremim-content">
-                <h2>Meu Trabalho</h2>
-                <p>
-                    Sou <strong>psicóloga</strong> com ampla experiência em ajudar indivíduos a encontrar equilíbrio emocional e mental. Minha abordagem é baseada na crença de que o autoconhecimento é a chave para o crescimento pessoal e para a melhoria contínua da qualidade de vida.
-                </p>
-                <p>
-                    Com uma formação sólida e contínua em psicologia, trabalho com técnicas comprovadas para promover a saúde mental e o bem-estar. Meu foco é ajudar meus clientes a entenderem e superarem desafios emocionais, desenvolverem estratégias de enfrentamento eficazes e alcançarem seus objetivos pessoais e profissionais.
-                </p>
-                <p>
-                    Além de consultas individuais, ofereço workshops e grupos de apoio que abordam temas como gerenciamento do estresse, desenvolvimento da autoestima e construção de relacionamentos saudáveis. Estou comprometida em criar um ambiente acolhedor e seguro onde cada pessoa possa explorar seu potencial máximo.
-                </p>
-                <p>
-                    Se você está em busca de uma abordagem personalizada e eficaz para melhorar seu bem-estar mental e emocional, estou aqui para apoiar sua jornada. Entre em contato para saber mais sobre como podemos trabalhar juntos para alcançar seus objetivos.
-                </p>
+        <section class="meutrabalho" id="meutrabalho">
+            <div class="meutrabalho-container">
+                <div class="meutrabalho-image">
+                    <img src="PNG/sobremim.jpg" alt="Imagem da Psicóloga Vanessa">
+                </div>
+                <div class="meutrabalho-content">
+                    <h2>Meu Trabalho</h2>
+                    <p>
+                        Sou <strong>psicóloga</strong> com ampla experiência em ajudar indivíduos a encontrar equilíbrio emocional e mental. Minha abordagem é baseada na crença de que o autoconhecimento é a chave para o crescimento pessoal e para a melhoria contínua da qualidade de vida.
+                    </p>
+                    <p>
+                        Com uma formação sólida e contínua em psicologia, trabalho com técnicas comprovadas para promover a saúde mental e o bem-estar. Meu foco é ajudar meus clientes a entenderem e superarem desafios emocionais, desenvolverem estratégias de enfrentamento eficazes e alcançarem seus objetivos pessoais e profissionais.
+                    </p>
+                    <p>
+                        Além de consultas individuais, ofereço workshops e grupos de apoio que abordam temas como gerenciamento do estresse, desenvolvimento da autoestima e construção de relacionamentos saudáveis. Estou comprometida em criar um ambiente acolhedor e seguro onde cada pessoa possa explorar seu potencial máximo.
+                    </p>
+                    <p>
+                        Se você está em busca de uma abordagem personalizada e eficaz para melhorar seu bem-estar mental e emocional, estou aqui para apoiar sua jornada. Entre em contato para saber mais sobre como podemos trabalhar juntos para alcançar seus objetivos.
+                    </p>
+                    <a href="#contato" class="btn-contato">Entre em Contato</a>
+                </div>
             </div>
-        </section>           
+        </section>        
         <div class="sobremim-conteudo">
             <div>
                 <h4>Sobre Vanessa</h4>
