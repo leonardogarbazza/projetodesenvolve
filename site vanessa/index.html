@@ -5,34 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicóloga Vanessa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="style.css" rel="stylesheet" />
     <style>
+        /* Estilização do corpo */
         body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
             background: linear-gradient(135deg, #f7ece1, #ec895b);
-            /* Se você deseja adicionar mais camadas de gradiente, pode fazer algo assim:
-            background: linear-gradient(to bottom right, #f3f4f6, #e2e5e9, #c9d6ff);
-            */
             color: #333;
         }
 
+        /* Estilização do cabeçalho */
         header {
+            position: fixed; /* Fixa o menu no topo */
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: #ffffff;
-            padding: 10px 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 9px 16px; /* Reduzido padding do cabeçalho */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            z-index: 500;
+            transition: background-color 0.3s ease;
         }
 
-        #img img {
-            width: 280px;
-            height: auto;
-        }
-
+        /* Estilização da navegação */
         nav {
             flex-grow: 1;
             text-align: center;
@@ -47,183 +49,328 @@
 
         nav ul li {
             display: inline;
-            margin-left: 30px; /* Aumentado de 20px para 30px para mais espaçamento */
+            margin-left: 10px; /* Reduzido margem entre itens */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600; /* Peso da fonte mais leve */
+            padding: 4px 8px; /* Reduzido padding dos links */
+            border-radius: 4px;
+            font-size: 1em; /* Aumentado o tamanho da fonte para 1em */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #007bff; /* Cor de fundo ao passar o mouse */
+            color: #ffffff; /* Texto branco ao passar o mouse */
+        }
+
+        /* Ajuste do conteúdo principal */
+        main {
+            padding: 80px 20px 20px; /* Adiciona padding para compensar a altura do cabeçalho fixo */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Ajusta o título */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        header.scrolled {
+            background-color: #daf0ed; /* Muda a cor de fundo ao rolar */
+        }
+
+        #img img {
+            width: 200px;
+            height: auto;
+        }
+
+        /* Estilização da navegação */
+        nav {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 30px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #333;
             font-weight: 600;
-            transition: color 0.3s ease;
+            padding: 8px 16px; /* Adiciona padding para áreas clicáveis maiores */
+            border-radius: 5px; /* Bordas arredondadas */
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        nav ul li a:hover {
-            color: #007bff;
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #fae7e5; /* Cor de fundo ao passar o mouse */
+            color: #ffffff; /* Texto branco ao passar o mouse */
         }
 
+        /* Estilização do conteúdo principal */
         main {
-            padding: 20px;
+            padding: 80px 20px 20px; /* Adiciona padding para compensar a altura do cabeçalho fixo */
             max-width: 1200px;
             margin: 0 auto;
         }
 
+        /* Adiciona espaçamento e ajuste para o título */
         h1 {
             text-align: center;
             color: #333;
             margin-bottom: 20px;
         }
 
+
+        .imagem-centro {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Ajusta a altura para ocupar a altura da viewport */
+            overflow: hidden;
+        }
+        
         .imagem-centro img {
-            width: 80%;
-            height: auto;
-            max-width: 700px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz com que a imagem cubra a área sem distorcer */
+            opacity: 0.7; /* Define a opacidade da imagem */
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
-        .sobremim, .faixa-agendamento {
-            background: #ffffff;
-            border-radius: 12px;
+        
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff; /* Cor do texto sobreposto */
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhorar a legibilidade do texto */
             padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .overlay h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .overlay p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        
+
+        .sobremim-conteudo {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
         }
-
-        .sobremim {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            flex-wrap: wrap;
+        
+        .sobremim-conteudo h4 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 15px;
         }
-
-        .sobremim div {
-            flex: 1;
-            min-width: 280px;
+        
+        .sobremim-conteudo p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
         }
-
-        .sobremim img {
-            width: 100%;
-            max-width: 350px;
-            height: auto;
-            border-radius: 12px;
+        
+        .sobremim-conteudo ul {
+            list-style-type: none;
+            padding: 0;
         }
-
-        .sobremim h2 {
+        
+        .sobremim-conteudo ul li {
+            font-size: 16px;
             color: #333;
             margin-bottom: 10px;
         }
-
-        .sobremim ul {
-            padding-left: 20px;
+        
+        .sobremim-conteudo ul li strong {
+            color: #007bff;
         }
-
-        .sobremim-conteudo {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .sobremim-conteudo img {
-            max-width: 50%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
+        /* Estilização da seção de agendamento */
         .faixa-agendamento {
-            background-color: #e3f2fd;
+            background-color: #f9f9f9; /* Cor de fundo suave */
+            padding: 30px 20px; /* Ajuste do espaço interno */
+            text-align: center; /* Centralizar o texto */
+            border-radius: 12px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            margin-top: 40px; /* Espaço acima da seção */
+            margin-bottom: 40px; /* Espaço abaixo da seção */
+        }
+
+        /* Container interno */
+        .agendamento-container {
+            max-width: 500px; /* Largura máxima para manter o conteúdo centralizado */
+            margin: 0 auto; /* Centraliza o container */
+        }
+
+        /* Estilização do texto */
+        .agendamento-text {
+            font-size: 1.3em; /* Reduzido para um tamanho mais compacto */
             color: #333;
-            text-align: center;
-            padding: 20px;
-            margin: 20px 0;
-            border: 1px solid #90caf9;
-            border-radius: 12px;
-        }
-
-        .faixa-agendamento p {
-            margin: 0;
-            font-size: 1.2em;
+            margin-bottom: 20px;
             font-weight: 600;
         }
 
-        .faixa-agendamento form {
-            margin-top: 10px;
-        }
-
-        .faixa-agendamento input[type="text"],
-        .faixa-agendamento input[type="submit"] {
-            padding: 10px;
-            margin: 5px;
-            border: 1px solid #90caf9;
-            border-radius: 8px;
-        }
-
-        .faixa-agendamento input[type="submit"] {
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        .faixa-agendamento input[type="submit"]:hover {
-            background-color: #0069d9;
-        }
-
-        .faixa-agendamento .whatsapp-button {
-            margin-top: 20px;
-            display: inline-flex;
-            align-items: center;
-            background-color: #25d366;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        .faixa-agendamento .whatsapp-button:hover {
-            background-color: #20c357;
-        }
-
-        .faixa-agendamento .whatsapp-button img {
-            margin-right: 8px;
-        }
-
-        .servicos {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+        /* Estilização do formulário */
+        .agendamento-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaçamento entre os campos */
             margin-bottom: 20px;
         }
 
-        .servicos .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Estilização dos campos de input */
+        .form-input {
+            padding: 12px; /* Reduzido para um padding mais compacto */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            box-sizing: border-box;
         }
 
+        /* Estilização da área de texto */
+        .form-textarea {
+            height: 80px; /* Altura reduzida para uma área de mensagem menor */
+            resize: vertical; /* Permitir redimensionar verticalmente */
+        }
+
+        /* Estilização do botão de envio */
+        .form-submit {
+            background-color: #007bff; /* Cor de fundo azul */
+            color: #ffffff; /* Texto branco */
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 1em; /* Reduzido para um tamanho mais compacto */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-submit:hover {
+            background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+        }
+
+        /* Estilização do botão do WhatsApp */
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #25d366; /* Cor de fundo do WhatsApp */
+            color: #ffffff; /* Texto branco */
+            padding: 2px 6px; /* Ajuste no padding */
+            border-radius: 9px;
+            font-size: 1em; /* Reduzido para um tamanho mais compacto */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E; /* Cor mais escura ao passar o mouse */
+        }
+
+        /* Estilização do ícone do WhatsApp */
+        .whatsapp-icon {
+            width: 20px; /* Ajusta o tamanho do ícone */
+            height: 20px; /* Ajusta a altura do ícone */
+            margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+        }
+
+        /* Garantir que a seção de serviços preencha toda a largura da tela */
+        #servicos {
+            background-color: #ffffff; /* Cor de fundo branca */
+            padding: 40px 20px; /* Espaço interno para o conteúdo */
+            border-radius: 15px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil ao redor da seção */
+            margin-top: 60px; /* Espaço acima da seção para separação da seção anterior */
+            width: 100%; /* Ocupa toda a largura da tela */
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            position: relative; /* Necessário para o posicionamento absoluto dos cards */
+            overflow: hidden; /* Evita que elementos externos vazem da seção */
+        }
+
+        /* Garantir que os cards se ajustem e preenchem a seção corretamente */
+        .servicos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Duas colunas de largura igual */
+            gap: 30px; /* Espaçamento entre os cards */
+            margin: 0; /* Remover margem interna */
+        }
+
+        /* Estilização dos cards */
+        .servicos .card {
+            background: #fcebde; /* Fundo branco para os cards */
+            border-radius: 15px; /* Bordas arredondadas */
+            padding: 25px; /* Espaço interno dos cards */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            border: 1px solid #e0e0e0; /* Borda sutil ao redor dos cards */
+            overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+            text-align: center; /* Alinha o texto ao centro */
+            position: relative; /* Necessário para a linha superior decorativa */
+        }
+
+        /* Linha decorativa superior no card */
+        .servicos .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px; /* Linha superior decorativa */
+            background: #007bff; /* Cor da linha */
+        }
+
+        /* Efeito de hover nos cards */
         .servicos .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            background-color: #e3f2fd;
         }
 
+        /* Estilização do título dos cards */
         .servicos .card h3 {
-            margin-top: 0;
-            color: #007bff;
-            font-size: 1.4em;
-            font-weight: 600;
+            margin-top: 15px;
+            color: #007bff; /* Cor do título */
+            font-size: 1.6em; /* Tamanho maior para o título */
+            font-weight: 700;
+            border-bottom: 3px solid #007bff; /* Linha inferior decorativa */
+            padding-bottom: 10px;
         }
 
+        /* Estilização do texto dos cards */
         .servicos .card p {
-            margin: 10px 0;
-            font-size: 1.1em;
+            margin: 15px 0;
+            font-size: 1.2em; /* Tamanho da fonte maior */
+            line-height: 1.6;
+            color: #555;
         }
 
+        /* Estilização do rodapé */
         footer {
             background-color: #ffffff;
             padding: 10px 20px;
@@ -231,7 +378,7 @@
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
-
+        
         /* Novos estilos para FAQs e Redes Sociais */
         .faqs {
             background-color: #ffffff;
@@ -282,27 +429,78 @@
             font-size: 1.5em;
         }
 
+        /* Estilo para a seção de redes sociais */
+        #contato {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #contato h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
 
         .redes-sociais {
-            text-align: center;
-            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
 
-        .redes-sociais a {
-            margin: 0 10px;
+        .social-icon {
             display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .redes-sociais img {
-            width: 24px;
-            height: 24px;
-            vertical-align: middle;
-            transition: opacity 0.3s ease;
+        .social-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .redes-sociais img:hover {
-            opacity: 0.7;
+        .social-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
+        .header-socials {
+            position: relative; /* Permite posicionar os ícones com base no container */
+            display: flex;
+            justify-content: flex-start; /* Alinha os ícones à esquerda */
+            align-items: center; /* Alinha os ícones verticalmente no centro */
+            padding: 10px; /* Espaço interno ao redor dos ícones */
+            margin-left: 0; /* Remove qualquer margem esquerda, ajustando para ficar mais à esquerda */
+        }
+
+        .social-link {
+            position: relative; /* Permite ajustar a posição do ícone */
+            display: flex;
+            align-items: center; /* Alinha o ícone verticalmente no centro */
+            justify-content: center; /* Alinha o ícone horizontalmente no centro */
+            width: 40px; /* Largura fixa para o ícone */
+            height: 40px; /* Altura fixa para o ícone */
+            border-radius: 50%; /* Torna o ícone circular */
+            background-color: #e0e0e0; /* Cor de fundo dos ícones */
+            color: #333; /* Cor do ícone */
+            text-decoration: none; /* Remove sublinhado dos links */
+            font-size: 1.5em; /* Tamanho do ícone */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+            margin-left: 5px; /* Ajusta a margem esquerda dos ícones, se necessário */
+            left: -10px; /* Move o ícone para a esquerda */
+        }
+        /* Estilização ao passar o mouse sobre o ícone */
+        .social-link:hover {
+            background-color: #007bff; /* Cor de fundo ao passar o mouse */
+            color: #ffffff; /* Cor do ícone ao passar o mouse */
+        }
+
     </style>
 </head>
 
@@ -321,64 +519,96 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <div class="header-socials">
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        </div>
     </header>
     <main>
         <h1>Vanessa Malvina de Oliveira | Psicóloga Equilíbrio Emocional</h1>
         <div class="imagem-centro">
-            <img src="./PNG/imgbracoscruzados.jpg" alt="imagem braços cruzados">
-        </div>
-        <div class="sobremim" id="sobremim">
-            <div>
-                <h2>Sobre mim</h2>
-                <p>Sou <strong>psicóloga</strong>, atuo com pessoas que buscam alcançar o equilíbrio de suas emoções. Acredito que a ferramenta mais poderosa para isso está no autoconhecimento, pois só dominamos aquilo que sabemos.</p>
+            <img src="PNG/imgbracoscruzados.jpg" alt="Imagem de Fundo">
+            <div class="overlay">
+                <h2>Bem-vindo à Psicologia Vanessa!</h2>
+                <p>Estou aqui para oferecer suporte e orientação em sua jornada emocional. Explore nosso espaço e descubra como podemos trabalhar juntos para promover seu bem-estar.</p>                
             </div>
         </div>
+        <section class="sobremim" id="sobremim">
+            <div class="sobremim-content">
+                <h2>Meu Trabalho</h2>
+                <p>
+                    Sou <strong>psicóloga</strong> com ampla experiência em ajudar indivíduos a encontrar equilíbrio emocional e mental. Minha abordagem é baseada na crença de que o autoconhecimento é a chave para o crescimento pessoal e para a melhoria contínua da qualidade de vida.
+                </p>
+                <p>
+                    Com uma formação sólida e contínua em psicologia, trabalho com técnicas comprovadas para promover a saúde mental e o bem-estar. Meu foco é ajudar meus clientes a entenderem e superarem desafios emocionais, desenvolverem estratégias de enfrentamento eficazes e alcançarem seus objetivos pessoais e profissionais.
+                </p>
+                <p>
+                    Além de consultas individuais, ofereço workshops e grupos de apoio que abordam temas como gerenciamento do estresse, desenvolvimento da autoestima e construção de relacionamentos saudáveis. Estou comprometida em criar um ambiente acolhedor e seguro onde cada pessoa possa explorar seu potencial máximo.
+                </p>
+                <p>
+                    Se você está em busca de uma abordagem personalizada e eficaz para melhorar seu bem-estar mental e emocional, estou aqui para apoiar sua jornada. Entre em contato para saber mais sobre como podemos trabalhar juntos para alcançar seus objetivos.
+                </p>
+            </div>
+        </section>           
         <div class="sobremim-conteudo">
             <div>
-                <h4>Amo ser psicóloga, mas isso não é tudo que sou...</h4>
+                <h4>Sobre Vanessa</h4>
+                <p>Embora minha paixão pela psicologia seja uma parte fundamental da minha vida, sou muito mais do que isso. Aqui estão alguns aspectos que definem quem eu sou:</p>
                 <ul>
-                    <li>Sou de Bom Despacho, uma cidade do centro-oeste mineiro, com suas características interioranas, a qual não pretendo deixar.</li>
-                    <li>Sempre quis ser mãe e há seis anos vivo os desafios e delícias da maternidade.</li>
-                    <li>Gosto de previsibilidade e rotinas, apesar de ter dificuldades de manter algumas constâncias importantes como a academia e o uso de protetor solar.</li>
-                    <li>Me desconecto e me reenergizo viajando ou em um fim de semana no sítio.</li>
+                    <li><strong>Origem:</strong> Natural de Bom Despacho, uma acolhedora cidade do centro-oeste mineiro. Suas características encantadoras me fazem querer permanecer aqui para sempre.</li>
+                    <li><strong>Maternidade:</strong> Há seis anos, sou desafiada e recompensada pela maternidade, uma experiência que traz muito aprendizado e alegria para minha vida.</li>
+                    <li><strong>Rotinas e Hábitos:</strong> Apesar de valorizar a previsibilidade e as rotinas, reconheço que manter hábitos como ir à academia e usar protetor solar pode ser um desafio.</li>
+                    <li><strong>Momentos de Relaxamento:</strong> Encontro equilíbrio e renovação ao viajar ou desfrutar de um fim de semana tranquilo no sítio.</li>
                 </ul>
-                <p>O meu objetivo é dar a melhor experiência e contribuir para que as pessoas alcancem seus objetivos, com empatia e respeito.</p>
+                <p>Meu objetivo é proporcionar a melhor experiência possível, ajudando você a atingir seus objetivos com empatia, respeito e dedicação. Vamos juntos construir um caminho para o seu crescimento e bem-estar!</p>
             </div>
-        </div>
+        </div>             
         <section id="servicos">
             <h2>Meus Serviços</h2>
             <div class="servicos">
                 <div class="card">
                     <h3>Psicoterapia Individual</h3>
-                    <p>Oferecemos sessões de psicoterapia individual para tratar questões emocionais, comportamentais e de saúde mental.</p>
+                    <p>
+                        Oferecemos sessões de <strong>psicoterapia individual</strong> para tratar uma ampla gama de questões emocionais, comportamentais e de saúde mental. Trabalhamos juntos para explorar desafios pessoais e desenvolver estratégias eficazes para promover o bem-estar e o equilíbrio emocional.
+                    </p>
                 </div>
                 <div class="card">
                     <h3>Psicoterapia de Casal</h3>
-                    <p>Tratamos problemas relacionais e ajudamos casais a melhorar a comunicação e resolver conflitos.</p>
+                    <p>
+                        A <strong>psicoterapia de casal</strong> é ideal para casais que enfrentam dificuldades relacionais. Ajudamos a melhorar a comunicação, resolver conflitos e fortalecer o relacionamento, promovendo um ambiente mais harmonioso e satisfatório para ambos os parceiros.
+                    </p>
                 </div>
                 <div class="card">
                     <h3>Acompanhamento Psicopedagógico</h3>
-                    <p>Auxiliamos no desenvolvimento acadêmico e pessoal de crianças e adolescentes com dificuldades de aprendizagem.</p>
+                    <p>
+                        Oferecemos <strong>acompanhamento psicopedagógico</strong> para crianças e adolescentes com dificuldades de aprendizagem. Nosso objetivo é apoiar o desenvolvimento acadêmico e pessoal, criando um plano de intervenção personalizado para superar desafios e promover o sucesso escolar.
+                    </p>
                 </div>
                 <div class="card">
                     <h3>Orientação Profissional</h3>
-                    <p>Oferecemos suporte na escolha de carreira e no desenvolvimento profissional, auxiliando na tomada de decisões e no planejamento de carreira.</p>
+                    <p>
+                        A <strong>orientação profissional</strong> ajuda indivíduos a tomar decisões informadas sobre sua carreira e a desenvolver um plano de ação para alcançar seus objetivos profissionais. Oferecemos suporte na escolha de carreira, desenvolvimento de habilidades e planejamento de trajetória profissional.
+                    </p>
                 </div>
             </div>
-        </section>
+        </section>        
         <section class="faixa-agendamento" id="agendamento">
-            <p>Agende uma sessão agora mesmo e dê o primeiro passo para o equilíbrio emocional!</p>
-            <form action="#">
-                <input type="text" placeholder="Seu nome" required>
-                <input type="text" placeholder="Seu e-mail" required>
-                <input type="text" placeholder="Sua mensagem" required>
-                <input type="submit" value="Enviar">
-            </form>
-            <a href="https://api.whatsapp.com/send?phone=5541992443491" class="whatsapp-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp_Icon.png" alt="WhatsApp Icon" width="24" height="24">
-                Fale comigo no WhatsApp
-            </a>
+            <div class="agendamento-container">
+                <p class="agendamento-text">Agende uma sessão agora mesmo e dê o primeiro passo para o equilíbrio emocional!</p>
+                <form action="#" class="agendamento-form">
+                    <input type="text" placeholder="Seu nome" required class="form-input">
+                    <input type="email" placeholder="Seu e-mail" required class="form-input">
+                    <textarea placeholder="Sua mensagem" required class="form-input form-textarea"></textarea>
+                    <input type="submit" value="Enviar" class="form-submit">
+                </form>
+                <a href="https://api.whatsapp.com/send?phone=5541994443491" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WhatsApp_icon.png/640px-WhatsApp_icon.png" alt="WhatsApp Icon" class="whatsapp-icon">
+                    Fale comigo no WhatsApp
+                </a>
+            </div>
         </section>
+        
         <section class="faqs" id="faqs">
             <h2>Perguntas Frequentes</h2>
             <div class="accordion">
@@ -422,16 +652,17 @@
         </section>
               
         <section id="contato">
-            <h2>Redes sociais</h2>
+            <h2>Redes Sociais</h2>
             <div class="redes-sociais">
-                <a href="https://www.facebook.com/vanessa.malvina" target="_blank">
+                <a href="https://www.facebook.com/vanessa.malvina" target="_blank" class="social-icon facebook">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
                 </a>
-                <a href="https://www.instagram.com/vanessa.malvina" target="_blank">
+                <a href="https://www.instagram.com/vanessa.malvina" target="_blank" class="social-icon instagram">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
                 </a>
             </div>
         </section>
+        
     </main>
     <footer>
         <p>&copy; 2024 Psicóloga Vanessa. Todos os direitos reservados.</p>
@@ -457,6 +688,17 @@
             });
         });
     </script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
